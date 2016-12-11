@@ -9,6 +9,12 @@ class GbdkN < Formula
 
   def install
     system "make"
+
+    binaries = %w[bin/gbdk-n-assemble.sh bin/gbdk-n-compile.sh bin/gbdk-n-link.sh]
+    inreplace binaries, /GBDK_DIR=".+"$/, "GBDK_DIR=\"#{pkgshare}\""
+
+    bin.install binaries
+    bin.install "bin/gbdk-n-make-rom.sh"
     pkgshare.install "include", "lib"
   end
 
