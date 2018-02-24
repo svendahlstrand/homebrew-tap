@@ -11,6 +11,6 @@ brew install cast
 
 ## Add new formula
 
-Want to add new formula? Read the [Formula Cookbook][cookbook] for instructions.
+Want to add new formula? Read the [Formula Cookbook][cookbook] for instructions. Use `shasum -a 256 file` to calculate `file` checksums.
 
 [cookbook]: https://github.com/Homebrew/brew/blob/master/docs/Formula-Cookbook.md
